@@ -57,6 +57,10 @@
                 var choice = $(this).parents(".dropdown").find('.btn').val();
                 visualize("DNA-Visualizer/dna_files/" + choice, svg2, visual2);
             });
+	$(document).ready(function() {
+		visualize("DNA-Visualizer/dna_files/dna1_test", svg1, visual1);
+		visualize("DNA-Visualizer/dna_files/dna2_test", svg2, visual2);	
+	});
         </script>
 
     </body>

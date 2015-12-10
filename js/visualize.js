@@ -31,7 +31,6 @@ function visualize(dna_file, svg_elem, visual){
 
     d3.text(dna_file,
         function(data) {
-            console.log(data);
             var nodes = [];
             for (var i = 0; i < data.length; i++) {
                 var curr_node = new Node({char: data[i]});
@@ -62,5 +61,3 @@ function update_visualization(svg_elem, visual) {
         .style("fill", function(d) { return get_node_color(d); });
 }
 
-visualize("DNA-Visualizer/dna_files/dna1_test", svg1, visual1);
-visualize("DNA-Visualizer/dna_files/dna2_test", svg2, visual2);
