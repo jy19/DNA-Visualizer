@@ -58,7 +58,10 @@ var dna_visual = function()
 
     function compute_node_positions()
     {
+        console.log('compute node position');
+        console.log(nodes);
         var n = nodes.length;
+        console.log(n);
         deltax = ( size[0] - n * node_width ) / (n-1);
         for( var i=0 ; i<n ; ++i )
         {
