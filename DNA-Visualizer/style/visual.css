@@ -1,3 +1,8 @@
+html, body, .container-fluid {
+    background: #faf8ef;
+    color: #776e65;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
 .dropdown.dna_input {
     display: inline;
 }
@@ -35,10 +40,22 @@
     padding: 3%;
 }
 
+.nav-btn {
+    text-align: center;
+    background-color: #8f7a66;
+    border: none;
+}
+.nav-row {
+    padding: 5px;
+/*    margin: 5px;*/
+}
+/*
+>>>>>>> 907d226f036377ab0c29d67d27fd2578b45eeb2b
 ul,ol,li{
 	margin:0;
 	padding:0;
 }
+*/
 /*
 table{
 	border-collapse:collapse;

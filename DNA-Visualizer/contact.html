@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FAQ</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style/contact.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-row" id="nav_row_id">
+            <a href='/index.html' class='btn btn-md btn-info nav-btn'> Home </a>
+            <a href='/visualize.html' class='btn btn-md btn-info nav-btn'> Visualize </a>
+            <a href='/faq.html' class='btn btn-md btn-info nav-btn'> Info </a>
+            <a href='/contact.html' class='btn btn-md btn-info nav-btn'> Contact Us </a> 
+        </div>
+    <h1>Contact Us</h1>
+    <div class="contact-form">
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <label for="name">Your name:</label><br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+        </div>
+        <div class="row">
+            <label for="email">Your email:</label><br />
+            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+        </div>
+        <div class="row">
+            <label for="message">Your message:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+        </div>
+        <input type="hidden" name="action" value="submit"/>
+            <div class="send-email row" id="send_email_id">
+                <a href="mailto:example@email.com" class='btn btn-md btn-info'> Send Email </a> 
+            </div>
+<!--        <input id="submit_button" type="submit" value="Send email" />-->
+        </form>
+    </div>
+    </body>
+</html>
