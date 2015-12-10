@@ -62,5 +62,5 @@ function update_visualization(svg_elem, visual) {
         .style("fill", function(d) { return get_node_color(d); });
 }
 
-visualize("../DNA-Visualizer/dna_files/dna1_test", svg1, visual1);
-visualize("../DNA-Visualizer/dna_files/dna2_test", svg2, visual2);
+visualize("DNA-Visualizer/dna_files/dna1_test", svg1, visual1);
+visualize("DNA-Visualizer/dna_files/dna2_test", svg2, visual2);
