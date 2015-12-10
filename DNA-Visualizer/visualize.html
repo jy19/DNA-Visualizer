@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Visualize</title>
-	</head>
+    <head>
+        <title>Visualize</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style/visual.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="js/dna_node.js"></script>
+        <script src="js/visual.js"></script>
+    </head>
 
-	<body>
-		<p>Things to come. </p>
-	</body>
+    <body>
+    <h1>Compare Some DNAs! </h1>
+    <h3>Select DNAs to compare: </h3>
+    <div id="compareOptions">
+        <div class="dropdown dna_input">DNA 1:
+            <button class="btn btn-default dropdown-toggle" type="button" id="dna1_input" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Select DNA 1
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dna1" aria-labelledby="dna1_input">
+                <li><a href="#" data-value="dna1_test">Synthetic</a></li>
+                <li><a href="#" data-value="dna2_test">Synthetic 2</a></li>
+                <li><a href="#" data-value="alignment_test">Aligned 1</a></li>
+                <li><a href="#" data-value="alignment2_test">Aligned 2</a></li>
+            </ul>
+        </div>
+        <div class="dropdown dna_input">DNA 2:
+            <button class="btn btn-default dropdown-toggle" type="button" id="dna2_input" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Select DNA 2
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dna2" aria-labelledby="dna2_input">
+                <li><a href="#" data-value="dna1_test">Synthetic</a></li>
+                <li><a href="#" data-value="dna2_test">Synthetic 2</a></li>
+                <li><a href="#" data-value="alignment_test">Aligned 1</a></li>
+                <li><a href="#" data-value="alignment2_test">Aligned 2</a></li>
+            </ul>
+        </div>
+    </div>
+        <div id="dna1"></div>
+        <div id="dna2"></div>
+        <script src="js/visualize.js"></script>
+        <script>
+            $(".dropdown-menu.dna1 li a").click(function(){
+                $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+                $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+                var choice = $(this).parents(".dropdown").find('.btn').val();
+                visualize("dna_files/" + choice, svg1, visual1);
+            });
+
+            $(".dropdown-menu.dna2 li a").click(function(){
+                $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+                $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+                var choice = $(this).parents(".dropdown").find('.btn').val();
+                visualize("dna_files/" + choice, svg2, visual2);
+            });
+        </script>
+
+    </body>
 </html>
