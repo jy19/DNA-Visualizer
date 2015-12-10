@@ -23,6 +23,18 @@
     position: absolute;
 }
 
+#dna1{
+    padding: 0;
+}
+
+#dna2 {
+    padding: 0;
+}
+
+#legend {
+    padding: 3%;
+}
+
 ul,ol,li{
 	margin:0;
 	padding:0;

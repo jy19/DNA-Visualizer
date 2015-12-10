@@ -2,7 +2,7 @@ var dna_visual = function()
 {
     var dna_visual = {},
         node_width = 10 ,
-        node_height = 75 ,
+        node_height = 100 ,
         size = [1, 1] ,
         nodes = [];
 
