@@ -1,67 +1,64 @@
 var dna_visual = function()
 {
-    var flowchart = {},
-        node_width = 2 ,
-        node_height = 50 ,
+    var dna_visual = {},
+        node_width = 10 ,
+        node_height = 75 ,
         size = [1, 1] ,
         nodes = [];
 
 
-    flowchart.node_width = function( _ )
+    dna_visual.node_width = function( _ )
     {
         if( !arguments.length ) return node_width;
         node_width = +_;
-        return flowchart;
+        return dna_visual;
     };
 
-    flowchart.node_padding = function( _ )
+    dna_visual.node_padding = function( _ )
     {
         if( !arguments.length ) return node_padding;
         node_padding = _;
-        return flowchart;
+        return dna_visual;
     };
 
-    flowchart.node_height = function( _ )
+    dna_visual.node_height = function( _ )
     {
         if( !arguments.length ) return node_height;
         node_height = _;
-        return flowchart;
+        return dna_visual;
     }
 
-    flowchart.deltax = function( _ )
+    dna_visual.deltax = function( _ )
     {
         if( !arguments.length ) return deltax;
         deltax = _;
-        return flowchart;
+        return dna_visual;
     }
 
-    flowchart.nodes = function( _ )
+    dna_visual.nodes = function( _ )
     {
         if( !arguments.length ) return nodes;
         nodes = _;
-        return flowchart;
+        return dna_visual;
     };
 
-    flowchart.size = function( _ )
+    dna_visual.size = function( _ )
     {
         if( !arguments.length ) return size;
         size = _;
-        return flowchart;
+        return dna_visual;
     };
 
-    flowchart.init = function() {};
+    dna_visual.init = function() {};
 
-    flowchart.layout = function()
+    dna_visual.layout = function()
     {
         compute_node_positions();
     };
 
     function compute_node_positions()
     {
-        console.log('compute node position');
-        console.log(nodes);
         var n = nodes.length;
-        console.log(n);
         deltax = ( size[0] - n * node_width ) / (n-1);
         for( var i=0 ; i<n ; ++i )
         {
@@ -73,5 +70,5 @@ var dna_visual = function()
         }
     }
 
-    return flowchart;
+    return dna_visual;
 };

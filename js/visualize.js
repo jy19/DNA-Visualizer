@@ -1,17 +1,17 @@
-var margin = {top: 50, right: 10, bottom:50, left: 10},
+var margin = {top: 0, right: 10, bottom:60, left: 10},
     width = $(window).width(),
     height = $(window).height(),
     colors = {"A": "#d7191c","C": "#fdae61","G": "#ffffbf","T": "#a6d96a", "-": "#000000"};
 
 var svg1 = d3.select("#dna1").append("svg")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height/2 - margin.bottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.bottom + ")");
 
 var svg2 = d3.select("#dna2").append("svg")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height/2 - margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -19,7 +19,12 @@ function get_node_color(node) {
     return colors[node.char]
 }
 
+var node_height = height/2 - 2*margin.bottom;
+
 var visual1 = dna_visual()
+    .size([width, height]);
+
+var visual2 = dna_visual()
     .size([width, height]);
 
 function visualize(dna_file, svg_elem, visual){
@@ -58,3 +63,4 @@ function update_visualization(svg_elem, visual) {
 }
 
 visualize("../dna_files/dna1_test", svg1, visual1);
+visualize("../dna_files/dna2_test", svg2, visual2);
