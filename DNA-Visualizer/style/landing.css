@@ -1,0 +1,66 @@
+html, body, .container-fluid {
+    background: #faf8ef;
+    color: #776e65;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.splash-row {
+    background: #2eb8e6;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 30px;
+}
+
+.main-img {
+    padding-top: 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.white-h1 {
+    padding-top: 5%;
+    color: white;
+    font-size: 50px;
+}
+
+.white-h4 {
+    color: white;
+}
+
+.startBtn {
+    width: 50%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.splash-btn {
+    text-align: center;
+    background-color: #8f7a66;
+    border: none;
+}
+
+.splash-btn:hover, .splash-btn:active {
+    background-color: #726252;
+}
+
+.footer {
+    /*position: absolute;*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* fixed height of footer?  */
+    height: 70px;
+    background-color: #f5f5f5;
+    padding-top: 10px;
+}
+
+.footer-text {
+    float: left;
+    width: 75%
+}
+
+.footer-cert {
+    float: left;
+    width: 25%;
+}

@@ -3,13 +3,13 @@
     <head>
         <title>Visualize</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link href="style/visual.css" rel="stylesheet">
+        <link href="DNA-Visualizer/style/visual.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        <script src="js/dna_node.js"></script>
-        <script src="js/visual.js"></script>
-        <script src="js/fisheye.js"></script>
+        <script src="DNA-Visualizer/js/dna_node.js"></script>
+        <script src="DNA-Visualizer/js/visual.js"></script>
+        <script src="DNA-Visualizer/js/fisheye.js"></script>
     </head>
     <body>
         <ul id="nav">
@@ -65,7 +65,7 @@
         <div id="dna1"></div>
         <div id="dna2"></div>
         <div id="legend">Legend: </div>
-        <script src="js/visualize.js"></script>
+        <script src="DNA-Visualizer/js/visualize.js"></script>
         <script>
             var choice1 = "dna1_test";
             var choice2 = "dna1_test";
@@ -74,7 +74,7 @@
                 $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
                 var choice = $(this).parents(".dropdown").find('.btn').val();
                 choice1 = choice;
-                visualize("dna_files/" + choice, svg1, visual1);
+                visualize("DNA-Visualizer/dna_files/" + choice, svg1, visual1);
             });
 
             $(".dropdown-menu.dna2 li a").click(function(){
@@ -82,7 +82,7 @@
                 $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
                 var choice = $(this).parents(".dropdown").find('.btn').val();
                 choice2 = choice;
-                visualize("dna_files/" + choice, svg2, visual2);
+                visualize("DNA-Visualizer/dna_files/" + choice, svg2, visual2);
             });
 
             $("#align").click(function() {
@@ -91,15 +91,15 @@
 //                console.log('align clicked!');
 //                console.log(dna1);
 //                console.log(dna2);
-                visualize("dna_files/" + dna1 + "alignv" + dna2, svg1, visual1);
-                visualize("dna_files/" + dna2 + "alignv" + dna1, svg2, visual2);
+                visualize("DNA-Visualizer/dna_files/" + dna1 + "alignv" + dna2, svg1, visual1);
+                visualize("DNA-Visualizer/dna_files/" + dna2 + "alignv" + dna1, svg2, visual2);
             });
 
             $(document).ready(function() {
 //                visualize("dna_files/homo_sapiens_chrom7", svg1, visual1);
 //                visualize("dna_files/homo_sapiens_chrom19", svg2, visual2);
-                visualize("dna_files/dna1_test", svg1, visual1);
-                visualize("dna_files/dna2_test", svg2, visual2);
+                visualize("DNA-Visualizer/dna_files/dna1_test", svg1, visual1);
+                visualize("DNA-Visualizer/dna_files/dna2_test", svg2, visual2);
             });
 
         </script>
