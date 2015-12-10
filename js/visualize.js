@@ -15,6 +15,17 @@ var svg2 = d3.select("#dna2").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+//This would be cool but I lazy.
+//var fisheye_x = d3.fisheye.scale(d3.scale.identity).domain([0, width]).focus(width/2);
+//var fisheye = d3.fisheye.circular()
+//    .radius(200)
+//    .distortion(1);
+
+//svg1.on("mousemove", function() {
+//    //fisheye_x.focus(d3.mouse(this));
+//    fisheye.focus(d3.mouse(this));
+//});
+
 function get_node_color(node) {
     return colors[node.char]
 }
@@ -31,7 +42,6 @@ function visualize(dna_file, svg_elem, visual){
 
     d3.text(dna_file,
         function(data) {
-            console.log(data);
             var nodes = [];
             for (var i = 0; i < data.length; i++) {
                 var curr_node = new Node({char: data[i]});
@@ -61,6 +71,3 @@ function update_visualization(svg_elem, visual) {
         .attr("width", visual.node_width())
         .style("fill", function(d) { return get_node_color(d); });
 }
-
-visualize("../dna_files/dna1_test", svg1, visual1);
-visualize("../dna_files/dna2_test", svg2, visual2);

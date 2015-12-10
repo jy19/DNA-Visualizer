@@ -1,3 +1,24 @@
 .dropdown.dna_input {
     display: inline;
 }
+
+#dna_input {
+    text-align: left;
+    padding: 5%;
+}
+
+#dna2_input {
+    text-align: right;
+    padding: 5%;
+}
+
+.align {
+    text-align: center;
+    padding: 5%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#align {
+    position: absolute;
+}
