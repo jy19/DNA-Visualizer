@@ -22,3 +22,68 @@
 #align {
     position: absolute;
 }
+
+ul,ol,li{
+	margin:0;
+	padding:0;
+}
+/*
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img{
+	border:0;
+}
+address,caption,cite,code,dfn,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+caption,th{
+	text-align:left;
+}
+*/
+#nav{
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+}
+#nav li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#nav a{
+	display:block;
+	padding:5px;
+	color:#fff;
+	background:#333;
+	text-decoration:none;
+}
+#nav ul{
+	list-style:none;
+	position:absolute;
+	left:-9999px;
+}
+#nav ul li{
+	padding-top:1px;
+	float:none;
+}
+#nav ul a{
+	white-space:nowrap;
+}
+#nav li:hover ul{
+	left:0;
+}
+#nav li:hover a{
+	background:#3498db;
+	text-decoration:underline;
+}
+#nav li:hover ul a{
+	text-decoration:none;
+}
+#nav li:hover ul li a:hover{
+	background:#333;
+}
