@@ -1,0 +1,16 @@
+html, body, .container-fluid {
+    background: #faf8ef;
+    color: #776e65;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-btn {
+    text-align: center;
+    background-color: #8f7a66;
+    border: none;
+}
+
+.nav-row {
+    padding: 5px;
+/*    margin: 5px;*/
+}
