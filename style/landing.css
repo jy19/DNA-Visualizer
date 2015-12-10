@@ -8,13 +8,13 @@ html, body, .container-fluid {
     background: #2eb8e6;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .main-img {
-    padding-top: 5%;
-    width: 50%;
-    height: 50%;
+    padding-top: 3%;
+    width: 20%;
+    height: 20%;
 }
 
 .white-h1 {
